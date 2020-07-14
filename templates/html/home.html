@@ -1,0 +1,29 @@
+{% extends 'html/base.html' %}
+
+{% block content %}
+
+<br><br>
+<h2>Password Generator</h2>
+
+<form action="{% url 'password' %}">
+    <select name="length" id="">
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+    </select> Length
+
+    <br><br>
+    <input type="checkbox" name="uppercase">UpperCase
+
+    <input type="checkbox" name="special">Special 
+
+    <input type="checkbox" name="numbers">Numbers
+    <br><br>
+    <input type="submit" value="Generate Password" class="btn btn-primary"/>
+</form>
+
+<br><br>
+
+<a href="{% url 'about' %}">About</a>
+
+{% endblock %}
